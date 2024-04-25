@@ -55,7 +55,7 @@ img {
   font-weight: 600;
   font-style: normal;
   font-size: 40px;
-  border-bottom: 3px solid rgb(250, 230, 233);
+  border-bottom: 3px solid #ff9393;
   display: inline-block;
   padding-bottom: 10px;
   line-height: 1;
@@ -207,35 +207,28 @@ img {
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: -50px;
+  justify-content: center;
 }
 
 .skill-item {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  background-color: rgb(255,147,147,0.6);
+  border-radius: 50%;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.08);
+}
+
+.skill-item:nth-child(even) {
+  margin-top: 50px;
 }
 
 .skill-img {
-  width: 60px;
+  display: block; 
+  margin: auto;
+  width: 65%;
   height: auto;
-  margin-right: 20px;
-}
-
-.skill-body {
-  flex: 1;
-}
-
-.skill-name {
-  margin-bottom: 10px;
-}
-
-.skill-text {
-  font-size: 14px;
-  line-height: 1.8;
 }
 
 /*--------------------------------
@@ -268,20 +261,6 @@ img {
   margin-bottom: 30px;
 }
 
-/*--------------------------------
- Contact
----------------------------------*/
-.contact {
-  text-align: center;
-}
-
-.contact-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.contact-text {
-  margin-top: 10px;
-}
 /*--------------------------------
  ページトップ
 ---------------------------------*/
