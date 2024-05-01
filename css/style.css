@@ -188,7 +188,7 @@ transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*
 opacity: 0.5;/*透過50%*/
 }
 
-.works-slider .slick-slide.slick-center{
+.works-slider .slick-slide .slick-center{
 transform: scale(1);/*中央の画像のサイズだけ等倍に*/
 opacity: 1;/*透過なし*/
 }
