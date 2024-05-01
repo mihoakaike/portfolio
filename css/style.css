@@ -2,7 +2,7 @@ body {
   font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 15px;
   letter-spacing: .05em;
-  color: #333;
+  background-color: #fff;
 }
 
 a {
@@ -33,8 +33,8 @@ img {
   padding: 90px 0;
 }
 
-.section:nth-of-type(odd) {
-  background-color: #f7f7f7;
+.section:nth-of-type(even) {
+  background-color: rgba(244,159,180,0.2)
 }
 
 .container {
@@ -47,18 +47,24 @@ img {
  見出し
 ---------------------------------*/
 .title {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
   font-style: normal;
   font-size: 40px;
-  border-bottom: 3px solid #ff9393;
+
   display: inline-block;
   padding-bottom: 10px;
   line-height: 1;
   margin-bottom: 40px;
   text-align: left;
   letter-spacing: .05em;
-  color: #333;
+  color: #fff;
+  text-shadow:
+    0 0 0.05em #F06292,
+    0 0 0.10em #F06292,
+    0 0 0.15em #F06292,
+    0 0 0.30em #F06292;
+  filter: saturate(80%);
 }
 
 .lead {
@@ -66,8 +72,6 @@ img {
   line-height: 1.8;
   margin-bottom: 30px;
 }
-
-
 
 /*--------------------------------
  メインビジュアル
@@ -109,7 +113,7 @@ img {
 }
 
 #particles-js{ 
-  position:fixed;/*描画固定*/
+  position:absolute;
   z-index:1;/*描画を一番下に*/
   width: 100%;
   height: 100%;
@@ -153,47 +157,90 @@ img {
   font-family: "Nothing You Could Do", cursive;
   font-weight: 400;
   font-style: normal;
-  z-index: 3;
 }
 
 .menu-bar-item a:hover {
-  z-index: 2;
   transform: scale(1.3, 1.3);
 }
 /*--------------------------------
  Works
 ---------------------------------*/
-.works-list {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+/* スライダー*/
+.works-slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width:94%;
+  margin:0 auto;
 }
 
-.works-list-container:nth-child(even){
-  display: flex;
-  flex-direction: row-reverse; /*左右入れ替え*/
-}
-
-.works-item {
-  width: 45%;
-  margin: 30px;
-}
-
-.works-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+.works-slider img {
+  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height:auto;
   border: 5px solid #FFF;
   box-shadow: 0 0 5px #999;
-  }
+}
 
 .works-item:hover {
   opacity: .7;
 }
 
-.works-list-inner {
-  margin: 30px;
-  width: 40%
+.works-slider .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.works-slider .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;/*矢印の色*/
+  border-right: 2px solid #666;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+  text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+  display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:8px;/*ドットボタンのサイズ*/
+  height:8px;/*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
 }
 
 .works-name {

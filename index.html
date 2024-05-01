@@ -12,7 +12,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Homemade+Apple&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-
+        <!-- slick -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <!-- css -->
         <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
         <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
     </head>
@@ -39,35 +41,33 @@
             </div>
 
             <!-- works -->
-            <section class="works section" id="works">
+            <section class="works-section" id="works">
                 <div class="container">
                     <p class="title">WORKS</p>
-                    <div class="works-list">
-                        <div class="works-list-container">
+                    <ul class="works-slider">
+                        <li>
                             <a class="works-item" href="https://laravel-tabelog-kadai-0412-60e96cf79e5f.herokuapp.com/">
-                                <div class="works-img"><img src="img/works/html1.png" alt="html1"/></div>
+                                <img src="img/works/html1.png" alt="html1"/>
                             </a>
-                            <div class="works-list-inner">
-                                <h1 class="works-name">NAGOYA MESHI</h1>
-                                <p class="works-info">課題制作</p>   
-                                <p class="works-info">PHP/Laravel/HTML/CSS/JavaScript</p>
-                                <p class="works-detail">名古屋B級グルメに特化したレビューアプリです。<br>
-                                    有料会員登録、店舗予約、レビュー、お気に入り登録、などの機能を実装しています。</p>
-                            </div>
-                        </div>
-                        <div class="works-list-container">
+                            <h1 class="works-name">NAGOYA MESHI</h1>
+                            <p class="works-info">課題制作</p>   
+                            <p class="works-info">PHP/Laravel/HTML/CSS/JavaScript</p>
+                        </li>
+                        <li>
                             <a class="works-item" href="https://mihoakaike.github.io/corporate-site/">
-                                <div class="works-img"><img src="img/works/html2.png" alt="html2"/></div>
+                                <img src="img/works/html2.png" alt="html2"/>
                             </a>
-                            <div class="works-list-inner">
-                                <h1 class="works-name">コーポレートサイト</h1>
-                                <p class="works-info">課題制作</p>
-                                <p class="works-info">HTML/CSS</p>
-                                <p class="works-detail">5ページから構成されるコーポレートサイトです。<br>
-                                    PCのWebサイト制作はもちろんのこと、スマートフォンでも見やすくするためレスポンシブ対応を施しております。</p>
-                            </div>
-                        </div>
-                    </div>
+                            <h1 class="works-name">コーポレートサイト</h1>
+                            <p class="works-info">課題制作</p>
+                            <p class="works-info">HTML/CSS</p>
+                        </li>
+                        <li>
+                            <img src="img/works/html3.png" alt="html3"/>
+                            <h1 class="works-name">コーポレートサイト</h1>
+                            <p class="works-info">課題制作</p>
+                            <p class="works-info">wordpress</p>
+                        </li>
+                    </ul>
                 </div>
             </section>
             
@@ -126,6 +126,9 @@
         <!-- キラキラ -->
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script src="js/particlesJS.js"></script>
-
+        <!-- スライド -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/slider.js"></script>
     </body>
 </html>
