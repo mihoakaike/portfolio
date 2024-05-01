@@ -4,40 +4,37 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>ポートフォリオ</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-        <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-        <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+        
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Homemade+Apple&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+
+        <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
-        <div class="wrapper">
-
-            <!-- header -->
-            <header class="header">
-                <div class="container">
-                    <nav class="gnav">
-                        <ul class="gnav-list">
-                            <li class="gnav-item"><a href="#works">WORKS</a></li>
-                            <li class="gnav-item"><a href="#skill">SKILL</a></li>
-                            <li class="gnav-item"><a href="#about">ABOUT</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-
-            <main class="content">
-
+        <main class="content">
             <!-- mv -->
             <div class="mv">
                 <div class="mv-container">
-                    <img src="img/main.jpg" alt="">
-                    <p class="mv-title">Portfolio</p>
+                    <div id="particles-js"></div>
+                    <div id="wrapper">    
+                        <p class="mv-title">Portfolio</p>
+                        <!-- menu bar -->
+                        <nav class="menu-bar">
+                            <ul class="menu-bar-list">
+                                <li class="menu-bar-item"><a href="#works">WORKS</a></li>
+                                <li class="menu-bar-item"><a href="#skill">SKILL</a></li>
+                                <li class="menu-bar-item"><a href="#about">ABOUT</a></li>
+                                <li class="menu-bar-item"><a href="#about">CONTACT</a></li>
+                             </ul>
+                         </nav>
+                    </div>  
                 </div>
             </div>
 
@@ -102,18 +99,18 @@
             <!-- about -->
             <section class="about section" id="about">
                 <div class="container">
-                <p class="title">ABOUT</p>
-                <div class="profile">
-                    <div class="profile-body">
-                    <p>
-                        侍太郎
-                    </p>
-                    <p>
-                        東京都在住。フリーランスとしてWeb制作をしております。2014年より5年間医療業界で営業職として務めておりました。予てより趣味でしていたWebサイト制作を2020年より本業にしました。Web制作におけるデザイン、コーディング、スマートフォンサイト対応、WordPressなどが得意分野です。低予算でWebサイトをお作りしますので、お気軽にお問い合わせください。
-                    </p>
-                    
+                    <p class="title">ABOUT</p>
+                    <div class="profile">
+                        <div class="profile-body">
+                            <p>
+                                赤池美穂
+                            </p>
+                            <p>
+                                2000年生まれ。千葉県在住。<br>
+                                大学卒業後、SIer企業に勤める。
+                            </p>
+                        </div>
                     </div>
-                </div>
                 </div>
             </section>
 
@@ -121,9 +118,14 @@
             <footer class="footer">
                 <div class="copyright">&copy;AKAIKE MIHO</div>
             </footer>
-
-        </div>
+           
+        </main>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type='text/javascript' src="js/script.js"></script>
+        <script src="js/script.js"></script>
+        <!-- キラキラ -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="js/particlesJS.js"></script>
+
     </body>
 </html>

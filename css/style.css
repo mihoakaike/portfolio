@@ -29,10 +29,6 @@ img {
 /*--------------------------------
  レイアウト
 ---------------------------------*/
-.wrapper {
-  padding-top: 73px;
-}
-
 .section {
   padding: 90px 0;
 }
@@ -71,61 +67,7 @@ img {
   margin-bottom: 30px;
 }
 
-/*--------------------------------
-ヘッダー
----------------------------------*/
-.header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
-}
 
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 20px 40px;
-}
-
-.gnav-list {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.gnav-item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.gnav-item a {
-  position: relative;
-  font-size: 13px;
-  font-weight: bold;
-  display: inline-block;
-  padding: 5px 0;
-  transition: .3s;
-  letter-spacing: .05em;
-  color: #333;
-}
-.gnav-item a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #333;
-}
-
-.gnav-item a:hover:after {
-  width: 100%;
-}
 
 /*--------------------------------
  メインビジュアル
@@ -140,27 +82,83 @@ img {
 
 .mv-container {
   position: relative;
-  padding: 0 20px;
-}
-
-.mv-container img {
-  width: 100%;
-  height: auto;
+  background-image: url(../img/main.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .mv-title {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   padding:0;
   margin:0;
-  font-size: 250px;
+  font-size: 270px;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
   font-style: normal;
-  color: #ff9393;
-  text-shadow: 3px 4px 5px #fff
+  color: #FFF;
+  text-shadow:
+    0 0 0.05em #F06292,
+    0 0 0.10em #F06292,
+    0 0 0.15em #F06292,
+    0 0 0.30em #F06292;
+  filter: saturate(80%);
+}
+
+#particles-js{ 
+  position:fixed;/*描画固定*/
+  z-index:1;/*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper{
+  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 0;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width:100%;
+  height: 100%;
+}
+/*--------------------------------
+メニューバー
+---------------------------------*/
+.menu-bar {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+
+.menu-bar-list {
+  display: flex;
+}
+
+.menu-bar-item {
+  list-style: none;
+}
+
+.menu-bar-item a {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 30px;
+  margin-right: 70px;
+  transition: all 0.2s;
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 3;
+}
+
+.menu-bar-item a:hover {
+  z-index: 2;
+  transform: scale(1.3, 1.3);
 }
 /*--------------------------------
  Works
@@ -190,7 +188,7 @@ img {
   }
 
 .works-item:hover {
-  opacity: .9;
+  opacity: .7;
 }
 
 .works-list-inner {
@@ -296,7 +294,7 @@ img {
 ---------------------------------*/
 .footer {
   padding: 30px;
-  background-color: #333;
+  background-color: #fff;
 }
 
 .copyright {
@@ -305,66 +303,6 @@ img {
   color: #797979;
 }
 
-/*--------------------------------
- 下層：Worksページ
----------------------------------*/
-.article {
-  padding: 80px 0;
-}
-
-.article-container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.article-title {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.article-body {
-  max-width: 720px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
-
-.article-body h3 {
-  position: relative;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding-left: 1em;
-}
-
-.article-body img {
-  width: 100%;
-  height: auto;
-}
-
-.article-body h3:not(:first-child) {
-  margin-top: 50px;
-}
-
-.article-body h3::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  content: "";
-  border-radius: 3px;
-  background-color: #333;
-}
-
-.article-body p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.home-link {
-  text-align: center;
-}
 
 /*media Queries 767
 ----------------------------------------------------*/
@@ -394,10 +332,6 @@ img {
   }
 
   /* レイアウト */
-  .wrapper {
-    padding-top: 57px;
-  }
-
   .section {
     padding: 60px 0;
   }
@@ -429,8 +363,8 @@ img {
   }
 
   /*  メインビジュアル */
-  .mv {
-    height: 40vh;
+  .mv-container img{
+    height: 80vm;
   }
 
   .mv-container {
