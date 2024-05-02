@@ -166,12 +166,12 @@ img {
  Works
 ---------------------------------*/
 /* スライダー*/
-.works-slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
   width:94%;
   margin:0 auto;
 }
 
-.works-slider img {
+.slider img {
   width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
   height:auto;
   border: 5px solid #FFF;
@@ -182,13 +182,13 @@ img {
   opacity: .7;
 }
 
-.works-slider .slick-slide {
+.slider .slick-slide {
 transform: scale(0.8);/*左右の画像のサイズを80%に*/
 transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
 opacity: 0.5;/*透過50%*/
 }
 
-.works-slider .slick-slide .slick-center{
+.slider .slick-slide .slick-center{
 transform: scale(1);/*中央の画像のサイズだけ等倍に*/
 opacity: 1;/*透過なし*/
 }
