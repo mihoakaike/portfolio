@@ -30,7 +30,7 @@ img {
  レイアウト
 ---------------------------------*/
 .section {
-  padding: 90px 0;
+  padding: 30px 0;
 }
 
 .section:nth-of-type(even) {
@@ -55,7 +55,7 @@ img {
   display: inline-block;
   padding-bottom: 10px;
   line-height: 1;
-  margin-bottom: 40px;
+  margin-top: 40px;
   text-align: left;
   letter-spacing: .05em;
   color: #fff;
@@ -184,8 +184,7 @@ img {
 
 .slider .slick-slide {
 transform: scale(0.8);/*左右の画像のサイズを80%に*/
-transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
-opacity: 0.5;/*透過50%*/
+transition: all .8s;/*拡大や透過のアニメーションを0.5秒で行う*/
 }
 
 .slider .slick-slide .slick-center{
@@ -277,6 +276,35 @@ opacity: 1;/*透過なし*/
   background-color: rgb(255,147,147,0.6);
   border-radius: 50%;
   box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.08);
+  /*キラッと光る基点とするためrelativeを指定*/
+	position: relative;
+  text-decoration: none;
+  outline: none;
+    overflow: hidden;
+}
+
+.skill-item::before {
+	content: '';
+    /*絶対配置でキラッと光るの位置を決める*/
+	position: absolute;
+	top: 0;
+	left: -75%;
+    /*キラッと光る形状*/
+    width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	transform: skewX(-25deg);
+}
+
+/*hoverした際の移動のアニメーション*/
+.skill-item:hover::before {
+	animation: shine 0.7s;
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
 }
 
 .skill-item:nth-child(even) {
