@@ -6,10 +6,8 @@ body {
   background-color: #fff;
 }
 
-a {
-  transition: opacity .3s;
-  text-decoration: none;
-  color: #1ca9e3;
+p {
+  color: #52514C;
 }
 
 img {
@@ -19,12 +17,17 @@ img {
   border-style: none;
 }
 
-.pc-only {
-  display: block;
+.box {
+  margin: 0 0 50px;   /* 下方向に適度な余白 */
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: .5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;          /* 事前に下に50pxずらしておく */
 }
 
-.sp-only {
-  display: none;
+.active {
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
 }
 
 /*--------------------------------
@@ -51,21 +54,14 @@ img {
   font-family: "Prompt", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 35px;
-
+  color: #71706a;
   display: inline-block;
+  text-align: left;
+  font-size: 35px;
+  margin-top: 40px;
   padding-bottom: 10px;
   line-height: 1;
-  margin-top: 40px;
-  text-align: left;
-  letter-spacing: .05em;
-  color: #71706a;
-}
-
-.lead {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 30px;
+  letter-spacing: .05em; 
 }
 
 /*--------------------------------
@@ -73,10 +69,6 @@ img {
 ---------------------------------*/
 .mv {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  text-align: center;
   padding: 10px 10px 0 10px;
 }
 
@@ -89,18 +81,20 @@ img {
 }
 
 .mv-subtitle-1 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   position: absolute;
   color: #FFF;
   top: 32%;
   left: 38%;
   font-size: 20px;
-  
-  font-family: "Prompt", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .mv-title {
+  font-family: "Oooh Baby", cursive;
+  font-weight: 400;
+  font-style: normal;
   position: absolute;
   color: #FFF;
   top: 45%;
@@ -109,21 +103,17 @@ img {
   padding:0;
   margin:0;
   font-size: 150px;
-  font-family: "Oooh Baby", cursive;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .mv-subtitle-2 {
+ font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
   position: absolute;
   color: #FFF;
   top: 60%;
   left: 55%;
   font-size: 20px;
-  
-  font-family: "Prompt", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /*--------------------------------
@@ -149,15 +139,15 @@ img {
 }
 
 .menu-bar-item a {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display: block;
   text-decoration: none;
   color: #FFF;
   font-size: 40px;
   margin-right: 70px;
   transition: all 0.2s;
-  font-family: "Prompt", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .menu-bar-item a:hover {
@@ -194,7 +184,6 @@ opacity: 1;/*透過なし*/
 }
 
 /*矢印の設定*/
-
 /*戻る、次へ矢印の位置*/
 .slick-prev, 
 .slick-next {
@@ -270,24 +259,24 @@ opacity: 1;/*透過なし*/
 }
 
 .skill-content {
-  margin: 2em auto;
-	padding:1em;/*内側余白*/
+  background-color: #FFF;
+  padding: 1.5em;/*内側余白*/
 	border-radius:30px;/*丸みを調整*/
-  border: 1px solid #e0c2c4;
-  width: 33%;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 1px #999;
+  margin: 2em auto;
+  width: 32%;
 }
 
 .skill-list-title{
-  color: #52514C;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3%;
-  font-size: 200%;
-  
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+  font-size: 200%;
 }
 
 .skill-img {
@@ -298,38 +287,47 @@ opacity: 1;/*透過なし*/
 }
 
 .skill-comment{
-  line-height:165%;
+  line-height: 1.833;
 }
-
 
 /*--------------------------------
  About
 ---------------------------------*/
 .profile {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 70%;
   margin: 0 auto;
 }
+
+.profile-img-block {
+  width: 41.782%;
+}
+
 .profile-img {
-  width: 35%;
-  margin: 0 8%;
+  transform: scale3d(1, 1, 1);
+  width: 100%;
+  /* margin: 0 8%; */
+}
+
+.profile-body{
+  width: 41.667%;
 }
 
 .profile-name {
-  font-size: 300%;
+  font-size: 35px;
+  letter-spacing: .1em;
+  text-align: center;
 }
 
-
-.profile-body p:not(:last-child) {
-  margin-bottom: 30px;
-}
 
 /*--------------------------------
  Contact
 ---------------------------------*/
 .copy-link {
-  position: relative;
+  position:relative;
   padding: 10px;
   background: #fff;
   border: 1px solid #ddd;
@@ -338,7 +336,7 @@ opacity: 1;/*透過なし*/
 
   input {
     padding: 10px;
-    font-size: 18px;
+    font-size: 25px;
     color: #555;
     border: none;
     outline: none;
@@ -355,8 +353,8 @@ opacity: 1;/*透過なし*/
     border-radius: 10px;
     cursor: pointer;
 
-    &:active {
-      background: var(--main-color-light);
+    &::active {
+      background: #FFF;
     }
 
     &::before {
@@ -421,185 +419,147 @@ opacity: 1;/*透過なし*/
 }
 
 
-/*media Queries 767
-----------------------------------------------------*/
+/*--------------------------------
+ スマートフォン用
+---------------------------------*/
 @media screen and (max-width: 767px) {
   body {
     font-size: 14px;
   }
 
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
-  }
-
-  /* 見出し */
+  /*--------------------------------
+  見出し
+  ---------------------------------*/
   .title {
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
   }
 
-  .lead {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  /* レイアウト */
+  /*--------------------------------
+  レイアウト
+  ---------------------------------*/
   .section {
-    padding: 60px 0;
+    padding: 60px 0 20px 0;
   }
 
   .container {
     padding: 0 20px;
   }
-
-  /* ヘッダー */
-  .header .container {
-    padding: 15px;
-  }
-
-  .header-logo {
-    font-size: 15px;
-    margin-right: 15px;
-  }
-
-  .gnav-item:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  .gnav-item a {
-    font-size: 10px;
-  }
-
-  .gnav-item a:after {
-    display: none;
-  }
-
-  /*  メインビジュアル */
-  .mv-container img{
-    height: 80vm;
+  
+  /*--------------------------------
+  メインビジュアル
+  ---------------------------------*/
+  .mv-container {
+    height: 98vh;
   }
 
   .mv-container {
     padding: 0 20px;
   }
 
+  .mv-subtitle-1 {
+    top: 20%;
+    left: 18%;
+  }
+
   .mv-title {
-    font-size: 30px;
-  }
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 100px;
   }
 
-  .mv-text {
-    top: 75%;
-    font-size: 14px;
-    line-height: 1.7;
+  #particles-js {
+    height: 100%;
   }
 
-  /* Works */
-  .works-name {
-    font-size: 12px;
+  /*--------------------------------
+  メニューバー
+  ---------------------------------*/
+  .menu-bar-item {
+    display:none;
+  }
+
+  /*--------------------------------
+  Works
+  ---------------------------------*/
+  .slider {
+    width:100%;
+  }
+
+  .slider img {
+    width:100vw;
+    height:25vh;
   }
 
   .works-info {
     margin-top: 3px;
   }
 
-  .works-list {
-    justify-content: space-between;
+  .works-info {
+    font-size: 20px;
+    margin-top: 3px;
+    opacity: 0.8;
+  }
+  
+  .works-detail {
+    margin-top: 8px;
+    font-size: 18px;
   }
 
-  .works-item {
-    flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  .works-list-container:nth-child(even){
-    display: block;
-  }
-
-  /* Skill */
+  /*--------------------------------
+  Skill
+  ---------------------------------*/
   .skill-list {
     display: block;
     margin-bottom: 0;
   }
 
-  .skill-item {
-    width: 100%;
-    margin-bottom: 35px;
+  .skill-content {
+    margin: 2em auto;
+    width: 90%;
   }
 
-  .skill-item:last-child {
-    margin-bottom: 0;
+  .skill-img {
+    margin: 0 auto 8% auto;
   }
 
-  .skill-name {
-    margin-bottom: 5px;
-  }
-
-  .skill-text {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  /* About */
+  /*--------------------------------
+  About
+  --------------------------------*/
   .profile {
-    display: block;
+  display: block;
+  width: 100%;
   }
+
+  .profile-img-block {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
   .profile-img {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    width: 48.8vw;
+  }
+  .profile-body{
+    width: 100%;
+    margin-top: 3%;
   }
 
-  .profile-body p {
-    font-size: 14px;
-    line-height: 1.7;
+  .profile-name {
+    text-align: left;
+  }
+  /*--------------------------------
+  Contact
+  ---------------------------------*/
+  #contact{
+    display: none;
   }
 
-  .profile-body p:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  /* フッター */
+  /*--------------------------------
+  フッター
+  ---------------------------------*/
   .footer {
     padding: 20px;
-  }
-
-  /* 下層ページ */
-  .article {
-    padding: 50px 0;
-  }
-
-  .article-body h3 {
-    font-size: 16px;
-    padding-left: .8em;
-  }
-
-  .article-body h3:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .article-body p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-}
-
-.works-list-container:nth-child(odd){
-  display: flex;
-}
-
-@media(max-width : 767px ){
-  .works-list-container:nth-child(odd){
-  display: block;
+    background-color: #fbf9fa;
   }
 }
