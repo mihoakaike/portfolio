@@ -8,10 +8,9 @@
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Homemade+Apple&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Prompt&family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/c669828915.js" crossorigin="anonymous"></script>
         <!-- slick -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
         <!-- css -->
@@ -26,7 +25,9 @@
                 <div class="mv-container">
                     <div id="particles-js"></div>
                     <div id="wrapper">    
+                        <p class="mv-subtitle-1">MIHO AKAIKE</p>
                         <p class="mv-title">Portfolio</p>
+                        <p class="mv-subtitle-2">Since 2023.12</p>
                         <!-- menu bar -->
                         <nav class="menu-bar">
                             <ul class="menu-bar-list">
@@ -85,21 +86,28 @@
                 <div class="container">
                     <p class="title">SKILL</p>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="img\skills\php.png" alt="php"></p>
+                        <div class="skill-content">
+                            <p class="skill-list-title">Front-End</p>
+                            <p class="skill-img"><img src="img\skills\front-end.png" alt="front-end"></p>
+                            <p class="skill-comment">フロントエンド言語では、HTML・CSS・JavaScriptを習得しております。<br>
+                            HTML・CSSにより、Webサイトを一から構築することが可能です。<br>
+                            また、JavaScriptでWebサイトに基本的な動きをつけることが可能です。
+                            同時にjQueryの導入方法についても学習をしたため、ライブラリを使用してWebサイトに動きをつけることも可能です。</p>
                         </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="img\skills\laravel.png" alt="laravel"></p>
+                        <div class="skill-content">
+                            <p class="skill-list-title">Back-End</p>
+                            <p class="skill-img"><img src="img\skills\back-end.png" alt="back-end"></p>
+                            <p class="skill-comment">バックエンド言語では、PHPを習得しております。<br>
+                            PHPの習得により、Webサイトに様々な機能を持たせることが可能です。
+                            またLaravelを使用して、ログイン・予約機能などを持つ、Webアプリケーションの開発が可能です。</p>
                         </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="img/skills/html.png" alt="html"></p>
-                        </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="img\skills\css.png" alt="css"></p>
-                        </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="img/skills/js.png" alt="javascript"></p>
-                        </div>
+                        <div class="skill-content">
+                            <p class="skill-list-title">Other</p>
+                            <p class="skill-img"><img src="img\skills\other-skill.png" alt="mysql"></p>
+                            <p class="skill-comment">WordPressでは、テーマ（テンプレート）を利用したWebサイトの作成方法を習得しております。<br>
+                            またPHPを習得する際に、データベースの操作についても習得しております。
+                            </p>
+                        </div>                      
                     </div>
                 </div>
             </section>
@@ -109,19 +117,31 @@
                 <div class="container">
                     <p class="title">ABOUT</p>
                     <div class="profile">
+                        <img class="profile-img" src="img\about.jpg" alt="">
                         <div class="profile-body">
-                            <p>
-                                赤池美穂
-                            </p>
-                            <p>
-                                2000年生まれ。千葉県在住。<br>
-                                大学卒業後、SIer企業に勤務。
-                                現在、転職活動中。
+                            <p class="profile-name">赤池美穂</p>
+                            <p class="profile-comment"> 2000年生まれ。千葉県在住。<br>
+                            大学卒業後、SIer企業に勤務。
+                            現在、転職活動中。
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section class="contact section" id="about">
+                <div class="container">
+                    <p class="title">CONTACT</p>
+                    <div class="text-link">
+                        <div class="copy-link">
+                           <input type="text" class="link" value="akaike.miho.00@gmail.com" readonly>
+                           <button type="button">
+                                <i class="fas fa-clone"></i>
+                           </button>
+                        </div>
+                    </div>
+                </div>    
+            </section>    
 
             <!-- footer -->
             <footer class="footer">
@@ -129,9 +149,11 @@
             </footer>
            
         </main>
-        
+        <!--  -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
+        <!-- コピー -->
+        <script src="js/copy.js"></script>
         <!-- キラキラ -->
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script src="js/particlesJS.js"></script>
