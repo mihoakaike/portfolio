@@ -288,6 +288,7 @@ opacity: 1;/*透過なし*/
   box-shadow: 0 0 1px #999;
   margin: 2em auto;
   width: 32%;
+  height: auto;
 }
 
 .skill-list-title{
@@ -303,7 +304,7 @@ opacity: 1;/*透過なし*/
 
 .skill-img {
   width:80%;
-  height: 20%;
+  height: 10%;
   margin: 0 auto 20% auto;
   padding: 0;
 }
