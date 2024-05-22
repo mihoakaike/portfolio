@@ -17,17 +17,35 @@ img {
   border-style: none;
 }
 
-.box {
-  margin: 0 0 50px;   /* 下方向に適度な余白 */
-  opacity: 0;         /* 初期値は透明にしておく */
-  transition: .5s;    /* 動くスピードを0.5秒に指定 */
-  position: relative; /* 相対位置の設定 */
-  top: 50px;          /* 事前に下に50pxずらしておく */
+.wrapper{
+  overflow: hidden;
 }
 
-.active {
-  opacity: 1;         /* 透明度を元に戻す */
-  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+/*==================================================
+ふわっ
+===================================*/
+/* fadeUp */
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(180px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeUpTrigger{
+    opacity: 0;
 }
 
 /*--------------------------------
@@ -336,10 +354,14 @@ opacity: 1;/*透過なし*/
 /*--------------------------------
  Contact
 ---------------------------------*/
-.copy-link {
+  .text-link p{
+    display: flex;
+  }
+
+  .copy-link {
   position:relative;
   padding: 10px;
-  background: rgba(255,255,255,.9);;
+  background: rgba(255,255,255,.9);
   border: 1px solid #ddd;
   border-radius: 10px;
   display: flex;
@@ -347,7 +369,7 @@ opacity: 1;/*透過なし*/
   input {
     padding: 10px;
     font-size: 25px;
-    color: #555;
+    color: #52514C;
     border: none;
     outline: none;
     width: 100%;
@@ -355,15 +377,14 @@ opacity: 1;/*透過なし*/
 
   button {
     padding: 10px;
-    background: var(--main-color-dark);
+    background: rgba(255,255,255,.9);
     font-size: 18px;
-    
     outline: none;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-
-    &::active {
+  
+    &:active {
       background: rgba(255,255,255,.9);
     }
 
@@ -372,7 +393,6 @@ opacity: 1;/*透過なし*/
       position: absolute;
       top: -50px;
       right: 0px;
-      background: var(--main-color-dark);
       border-radius: 20px;
       padding: 9px 10px;
       font-size: 14px;
@@ -386,7 +406,6 @@ opacity: 1;/*透過なし*/
       right: 25px;
       width: 10px;
       height: 10px;
-      background: var(--main-color-dark);
       transform: rotate(45deg);
       display: none;
     }
@@ -418,7 +437,7 @@ opacity: 1;/*透過なし*/
  フッター
 ---------------------------------*/
 .footer {
-  padding: 30px;
+  padding: 60px;
   background-color: #fff;
 }
 
