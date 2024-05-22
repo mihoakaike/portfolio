@@ -266,6 +266,7 @@ opacity: 1;/*透過なし*/
   margin-top: 8px;
   font-size: 19px;
 }
+
 .works-detail::before {
   display: inline-block;
   content: "―";
@@ -519,10 +520,7 @@ opacity: 1;/*透過なし*/
   .slider img {
     width:100vw;
     height:25vh;
-  }
-
-  .works-info {
-    margin-top: 3px;
+    margin: 0 auto;
   }
 
   .works-info {
@@ -533,7 +531,7 @@ opacity: 1;/*透過なし*/
   
   .works-detail {
     margin-top: 8px;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   /*--------------------------------
